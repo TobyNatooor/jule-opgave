@@ -1,5 +1,5 @@
 
-setInterval(() => {
+countdownFunc = () => {
     let dato = new Date()
     let tidTilJul = new Date("December 24," + dato.getFullYear() + " 0:0:0").getTime()
     let idk = tidTilJul - dato.getTime()
@@ -15,6 +15,10 @@ minutter: ${minutter}
 sekunder: ${sekunder}`
 
     document.querySelector('#countdown').innerHTML = countdown
-    console.log(countdown)
-}, 1000);
+}
+
+countdownFunc()
+setInterval(() => countdownFunc(), 1000);
+
+
 
