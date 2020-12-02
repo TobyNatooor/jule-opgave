@@ -9,12 +9,10 @@ countdownFunc = () => {
     let timer = Math.floor(idk / (1000 * 60 * 60)) % 24
     let dage = Math.floor(idk / (1000 * 60 * 60 * 24)) % 31
 
-    countdown = `dage: ${dage}
-timer: ${timer}
-minutter: ${minutter}
-sekunder: ${sekunder}`
-
-    document.querySelector('#countdown').innerHTML = countdown
+    document.querySelector('#dage').innerHTML = 'dage: ' + dage
+    document.querySelector('#timer').innerHTML = 'timer: ' + timer
+    document.querySelector('#minutter').innerHTML = 'minutter: ' + minutter
+    document.querySelector('#sekunder').innerHTML = 'sekunder: ' + sekunder
 }
 
 countdownFunc()
