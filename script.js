@@ -1,4 +1,5 @@
 
+// countdown
 countdownFunc = () => {
     let dato = new Date()
     let tidTilJul = new Date("December 24," + dato.getFullYear() + " 0:0:0").getTime()
@@ -17,6 +18,3 @@ countdownFunc = () => {
 
 countdownFunc()
 setInterval(() => countdownFunc(), 1000);
-
-
-
