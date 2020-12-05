@@ -4,6 +4,11 @@
     color: white;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+}
+
+:root {
+    --CTWidth: 400px;
 }
 
 .countdown {
@@ -16,14 +21,46 @@
     margin: 20px;
     font-size: 20px;
 }
+
 .christmas-tree {
-    margin: 100px 0 0 0;
-    width: 400px;
+    margin-top: 100px;
+    width: var(--CTWidth);
 }
+
 .christmas-star {
     width: 100px;
+    top: 60vh;
+    left: 10vw;
     background-color: transparent;
     position: absolute;
+}
+
+.firework {
+    position: absolute;
+    background-color: transparent;
+    width: clamp(200px, 30vw, 400px);
+    height: clamp(200px, 30vw, 400px);
+    margin: auto 60vw auto 0;
+    opacity: 0;
+    pointer-events: none;
+    left: 0;
+}
+
+#snow {
+    position: fixed;
+    background-color: transparent;
+    transform: translate(-50vw, 70vh);
+    width: 105vw;
+    height: 30vh;
+}
+
+.right {
+    left: 65vw;
+}
+
+.firework-and-tree {
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
