@@ -5,10 +5,13 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-image: url('snow.gif');
+    background-repeat: 2;
 }
 
 :root {
     --CTWidth: 400px;
+    --CSWidth: 100px;
 }
 
 .countdown {
@@ -28,7 +31,7 @@
 }
 
 .christmas-star {
-    width: 100px;
+    width: var(--CSWidth);
     top: 60vh;
     left: 10vw;
     background-color: transparent;
@@ -67,9 +70,28 @@ h1 {
     margin: 10px;
 }
 
+#snow-snowing {
+
+    height: 100vh;
+}
+
+.pages {
+    width: 60vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
 a {
     font-size: 40px;
     border: 2px solid white;
     padding: 20px;
-    display: grid;
+}
+#bell {
+    background-color: transparent;
+    margin-top: 100px;
+}
+
+.ønskeliste {
+    margin-top: 100px;
 }
