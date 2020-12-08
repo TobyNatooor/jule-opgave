@@ -110,5 +110,13 @@ a {
 }
 #arrow {
     position: absolute;
+    pointer-events: all;
+    opacity: 1;
     width: 50px;
+    left: 5px;
+}
+
+.arrow-link {
+    pointer-events: none;
+    border: 0;
 }
