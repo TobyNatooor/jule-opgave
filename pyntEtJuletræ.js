@@ -40,9 +40,6 @@ christmasStar.addEventListener('mouseup', () => {
     }
 })
 
-console.log('x: ' + (TreeTop.x + (CTWidth / 2) + ' ' + 'y: ' + TreeTop.y))
-
-//check coordinates with click
 // document.addEventListener('click', e => {
 //     console.log(e.clientX, e.clientY)
 // })

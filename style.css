@@ -3,7 +3,6 @@
     color: white;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 :root {
@@ -11,24 +10,55 @@
     --CSWidth: 100px;
 }
 
-body, html {
+html {
     background-color: red;
     background-image: url('snow.gif');
     background-repeat: 2;
 }
 
+a {
+    font-size: clamp(20px, 3vw, 40px);
+    border: 2px solid white;
+    padding: 3vw;
+}
+
+h1 {
+    font-size: 5vw;
+    margin: 10px;
+}
+
+/* forside */
+
+.links {
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.bell {
+    background-color: transparent;
+    margin-top: 100px;
+}
+
+/* countdown */
+
 .countdown {
     border: 2px solid white;
+    background-color: red;
     margin: 40px auto;
-    width: 300px;
+    width: 60vw;
 }
 
-.mellemrum {
+#dage, #timer, #minutter, #sekunder {
     margin: 20px;
-    font-size: 20px;
+    font-size: 3vw;
 }
+
+/* pynt et juletræ */
 
 .christmas-tree {
+    background-color: transparent;
     margin-top: 100px;
     width: var(--CTWidth);
 }
@@ -52,10 +82,10 @@ body, html {
     left: 0;
 }
 
-#snow {
+.snow-lying {
     position: fixed;
     background-color: transparent;
-    transform: translate(-50vw, 70vh);
+    transform: translate(-55vw, 70vh);
     width: 105vw;
     height: 30vh;
 }
@@ -65,37 +95,14 @@ body, html {
 }
 
 .firework-and-tree {
+    background-color: transparent;
     display: flex;
     justify-content: center;
     background-image: url('snow.gif');
     background-repeat: 2;
 }
 
-h1 {
-    margin: 10px;
-}
-
-#snow-snowing {
-    height: 100vh;
-}
-
-.pages {
-    width: 60vw;
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-
-a {
-    font-size: 40px;
-    border: 2px solid white;
-    padding: 20px;
-}
-
-#bell {
-    background-color: transparent;
-    margin-top: 100px;
-}
+/* ønskeliste */
 
 .ønskeliste {
     margin-top: 100px;
@@ -104,10 +111,14 @@ a {
 #ønskButton {
     padding: 5px;
 }
+
 #ønskButton, #ønske, #liste {
     font-size: 20px;
     color: red;
 }
+
+/* pil hjem */
+
 #arrow {
     position: absolute;
     pointer-events: all;
