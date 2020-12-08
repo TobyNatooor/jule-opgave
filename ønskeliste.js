@@ -4,6 +4,8 @@ let liste = document.querySelector('#liste')
 let ønskButton = document.querySelector('#ønskButton')
 
 ønskButton.addEventListener('click', () => {
-    console.log(ønske.value)
-    liste.innerHTML += '<li>' + ønske.value + '</li>'
+    if (ønske.value) {
+        liste.innerHTML += '<li>' + ønske.value + '</li>'
+        ønske.value = ''
+    }
 })

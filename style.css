@@ -1,17 +1,20 @@
 * {
     text-align: center;
-    background-color: red;
     color: white;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: url('snow.gif');
-    background-repeat: 2;
 }
 
 :root {
     --CTWidth: 400px;
     --CSWidth: 100px;
+}
+
+body, html {
+    background-color: red;
+    background-image: url('snow.gif');
+    background-repeat: 2;
 }
 
 .countdown {
@@ -64,6 +67,8 @@
 .firework-and-tree {
     display: flex;
     justify-content: center;
+    background-image: url('snow.gif');
+    background-repeat: 2;
 }
 
 h1 {
@@ -71,7 +76,6 @@ h1 {
 }
 
 #snow-snowing {
-
     height: 100vh;
 }
 
@@ -87,6 +91,7 @@ a {
     border: 2px solid white;
     padding: 20px;
 }
+
 #bell {
     background-color: transparent;
     margin-top: 100px;
@@ -94,4 +99,16 @@ a {
 
 .ønskeliste {
     margin-top: 100px;
+}
+
+#ønskButton {
+    padding: 5px;
+}
+#ønskButton, #ønske, #liste {
+    font-size: 20px;
+    color: red;
+}
+#arrow {
+    position: absolute;
+    width: 50px;
 }
