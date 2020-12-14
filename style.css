@@ -16,13 +16,6 @@ html {
     background-repeat: 2;
 }
 
-a {
-    background-color: red;
-    font-size: clamp(20px, 3vw, 40px);
-    border: 2px solid white;
-    padding: 3vw;
-}
-
 h1 {
     font-size: 5vw;
     margin: 10px;
@@ -34,12 +27,20 @@ h1 {
     width: 80vw;
     margin: auto;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    grid-template-columns: auto auto;
+}
+
+a {
+    background-color: red;
+    font-size: clamp(20px, 3vw, 30px);
+    border: 2px solid white;
+    padding: 2vw 3vw;
 }
 
 .bell {
     background-color: transparent;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 /* countdown */
@@ -65,8 +66,8 @@ h1 {
 
 .christmas-star {
     width: var(--CSWidth);
-    top: 60vh;
-    left: 10vw;
+    /* top: 60vh;
+    left: 10vw; */
     position: absolute;
 }
 
@@ -111,6 +112,28 @@ h1 {
 #ønskButton, #ønske, #liste {
     font-size: 20px;
     color: red;
+}
+
+/* julegåder */
+
+.gåde-box {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 30vh auto 5px auto;
+    padding: 3vw;
+    width: 50vw;
+}
+
+#gåde {
+    color: black;
+    font-size: clamp(20px, 3vw, 40px);
+}
+
+#gåde-button {
+    padding: 10px;
+    color: black;
+    font-size: clamp(20px, 3vw, 40px);
 }
 
 /* pil hjem */

@@ -4,34 +4,29 @@ let StarCoords = christmasStar.getBoundingClientRect()
 let christmasTree = document.getElementsByClassName('christmas-tree')[0]
 let TreeTop = christmasTree.getBoundingClientRect()
 let CTWidth = parseInt(getComputedStyle(christmasTree).getPropertyValue('--CTWidth').replace('px', ''))
-let CSWidth = parseInt(getComputedStyle(christmasStar).getPropertyValue('--CTWidth').replace('px', ''))
+let CSWidth = parseInt(getComputedStyle(christmasStar).getPropertyValue('--CSWidth').replace('px', ''))
 let clicked = false
 let starOnTree = false
 
 christmasStar.ondragstart = () => false
 
-const moveStar = e => {
-    requestAnimationFrame(() => {
+const moveStar = (e) => {
         if (clicked && !starOnTree) {
             StarCoords = christmasStar.getBoundingClientRect()
-            christmasStar.style.left = (e.clientX - (CTWidth / 2)) + 'px'
-            christmasStar.style.top = (e.clientY - (CTWidth / 2)) + 'px'
-            requestAnimationFrame(moveStar)
+            christmasStar.style.left = (e.clientX - (CSWidth / 2)) + 'px'
+            christmasStar.style.top = (e.clientY - (CSWidth / 2)) + 'px'
         }
-    })
 }
 
 christmasStar.addEventListener('mousedown', () => {
     clicked = true
 })
-christmasStar.addEventListener('mousemove', e => {
+document.addEventListener('mousemove', (e) => {
     moveStar(e)
-})
-christmasStar.addEventListener('mouseleave', () => {
-    clicked = false
 })
 christmasStar.addEventListener('mouseup', () => {
     clicked = false
+    TreeTop = christmasTree.getBoundingClientRect()
     if (StarCoords.x < (TreeTop.x + (CTWidth / 2)) &&
         (StarCoords.x + CSWidth) > (TreeTop.x + (CTWidth / 2)) &&
         StarCoords.y < TreeTop.y &&
@@ -42,7 +37,7 @@ christmasStar.addEventListener('mouseup', () => {
     }
 })
 
-console.log('x: ' + (TreeTop.x + (CTWidth / 2) + ' ' + 'y: ' + TreeTop.y))
-document.addEventListener('click', e => {
-    console.log(e.clientX, e.clientY)
-})
+// console.log('x: ' + (TreeTop.x + (CTWidth / 2) + ' ' + 'y: ' + TreeTop.y))
+// document.addEventListener('click', e => {
+//     console.log(e.clientX, e.clientY)
+// })
